@@ -4,8 +4,15 @@
 // employee.code = 10;
 // employee.name = "John";
 
-
-const employee = {
-    code: 10,
-    name: "Jonh"
+type Employee = {
+    code: number,
+    name: string
 }
+
+function createEmployee(employee: Employee) {
+    return `code: ${employee.code}, name: ${employee.name}.`;
+}
+
+const emp = createEmployee({code: 10, name: "Jonh"})
+
+console.log(emp)
